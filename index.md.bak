@@ -1,0 +1,17 @@
+---
+layout: page
+
+---
+{% include JB/setup %}
+
+
+<ul class="posts">
+  {% for page in site.posts %}
+<div class="container2">
+<h3><a href="{{ BASE_PATH }}{{page.url}}">{{page.title}}</a></h3>
+{{ page.content }}
+<p><small><strong>{{ page.date | date: "%B %e, %Y" }}</strong></p>
+</div>
+  {% endfor %}
+</ul>
+
